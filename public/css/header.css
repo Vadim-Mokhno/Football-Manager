@@ -1,0 +1,51 @@
+.header {
+  background-color: #000;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.load-footballers {
+  cursor: pointer;
+}
+
+.create-footballer {
+  cursor: pointer;
+}
+
+.header .options {
+  display: flex;
+  gap: 25px;
+}
+
+.header .search-form {
+  display: none;
+}
+
+.header .burger-search-form {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-110%);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-height: 100vh;
+  width: 100%;
+  padding: 150px 100px;
+  background-color: whitesmoke;
+  transition: all 1s ease-in-out;
+}
+
+.header .burger-search-form.active {
+  transform: translateY(0);
+}
+
+@media (min-width: 600px) {
+  .header .search-form {
+    display: flex;
+    gap: 10px;
+  }
+}

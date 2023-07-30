@@ -1,0 +1,114 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 2px whitesmoke;
+  border-bottom: solid 2px whitesmoke;
+}
+
+.sorting-options-form h2 {
+  margin-bottom: 35px;
+  margin-top: 30px;
+}
+
+.main h2 {
+  margin-bottom: 35px;
+}
+
+.sorting-options-form {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 2px whitesmoke;
+  padding: 20px;
+}
+
+.input-value {
+  margin-bottom: 25px;
+}
+
+.sorting-options input[type='range'] {
+  width: 60%;
+}
+
+.position-label {
+  margin-bottom: 5px;
+}
+
+.position-select {
+  margin-bottom: 25px;
+  width: 220px;
+}
+
+.sorting-options ul {
+  list-style: none;
+}
+
+.foot {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.foot label {
+  margin-right: 10px;
+}
+
+.foot li {
+  display: flex;
+  width: 65px;
+  justify-content: space-between;
+}
+
+.user-options {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.user-options li {
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+}
+
+.sort-btn {
+  margin-bottom: 20px;
+  width: 170px;
+}
+
+.price-btn {
+  margin-bottom: 15px;
+}
+
+.sorting-options-footer {
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .main {
+    flex-direction: row;
+  }
+  .sorting-options {
+    width: 43%;
+  }
+  .display-area {
+    border-left: solid 2px whitesmoke;
+  }
+
+  .foot {
+    width: 90%;
+  }
+
+  .display-area {
+    width: 70%;
+  }
+}
+
+@media (min-width: 850px) {
+  .foot {
+    width: 200px;
+  }
+
+  .sorting-options {
+    width: 30%;
+  }
+}

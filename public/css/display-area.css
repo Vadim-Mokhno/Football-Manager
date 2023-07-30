@@ -1,0 +1,24 @@
+.display-area {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 500px) {
+  .display-area {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 930px) {
+  .display-area {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1450px) {
+  .display-area {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

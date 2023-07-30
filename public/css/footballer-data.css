@@ -1,0 +1,126 @@
+.footballer-data {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-height: 50vh;
+  width: 100%;
+  background-color: whitesmoke;
+  transition: all 1s ease-in-out;
+  color: black;
+  z-index: 40;
+  border-radius: 10px;
+}
+
+.footballer-data form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px 30px;
+}
+
+.footballer-data form input,
+.footballer-data form select,
+.footballer-data form fieldset {
+  margin-bottom: 25px;
+}
+
+.footballer-data.close {
+  transform: translateY(-110%);
+}
+
+.footballer-data header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: whitesmoke;
+  color: black;
+  border-bottom: solid 2px black;
+  padding: 15px 10px;
+}
+
+.footballer-data-heading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+.fotballer-data-form-btn {
+  width: 150px;
+}
+
+@media (min-width: 450px) {
+  .footballer-data form {
+    padding: 0 140px 50px;
+  }
+}
+
+@media (min-width: 520px) {
+  .footballer-data form {
+    padding: 0 180px 50px;
+  }
+}
+
+@media (min-width: 600px) {
+  .footballer-data {
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    min-height: 60vh;
+    width: 60%;
+  }
+
+  .footballer-data form {
+    padding: 0 100px 50px;
+  }
+
+  .footballer-data.close {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .footballer-data form {
+    padding: 0 150px 50px;
+  }
+}
+
+@media (min-width: 900px) {
+  .footballer-data form {
+    padding: 0 180px 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footballer-data form {
+    padding: 0 230px 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footballer-data form {
+    padding: 0 280px 50px;
+  }
+}
+
+@media (min-width: 1350px) {
+  .footballer-data form {
+    padding: 0 310px 50px;
+  }
+}
+
+.footballer-data fieldset li {
+  display: flex;
+  align-items: center;
+}
+
+.footballer-data fieldset li input {
+  margin: 0;
+}

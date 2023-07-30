@@ -1,0 +1,168 @@
+/***   BURGER-BUTTON   ***/
+
+.burger-menu {
+  display: block;
+  position: relative;
+  width: 28px;
+  height: 16px;
+  padding: 0.8rem 0.7rem;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.burger-menu::before,
+.burger-menu::after,
+.burger-menu span {
+  position: absolute;
+  height: 2.5px;
+  background-color: #fff;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger-menu span {
+  transform: scale(1);
+  top: 45%;
+  left: 6px;
+  width: 80%;
+}
+
+.burger-menu::before,
+.burger-menu::after {
+  content: ' ';
+}
+
+.burger-menu::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.burger-menu::after {
+  bottom: 0;
+  left: 12px;
+  width: 60%;
+}
+
+.burger-menu.close {
+  transform: translateY(10px);
+}
+
+.burger-menu.close span {
+  transform: scale(0);
+}
+
+.burger-menu.close::before {
+  transform: rotate(-45deg);
+  background-color: black;
+}
+
+.burger-menu.close::after {
+  width: 100%;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg);
+  background-color: black;
+}
+
+@media (min-width: 600px) {
+  .burger-menu {
+    display: none;
+  }
+}
+/*** BUTTON ***/
+button,
+select,
+input {
+  border-radius: 6px;
+  border: 3px solid rgb(51, 181, 229);
+  background-color: black;
+  color: whitesmoke;
+  font-family: inherit;
+  padding: 5px;
+  letter-spacing: 2px;
+}
+
+.footballer-data form button,
+.footballer-data form input,
+.footballer-data form select {
+  border: 3px solid black;
+  background-color: whitesmoke;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+}
+
+.burger-search-form input,
+.burger-search-form button {
+  border: 3px solid black;
+  background-color: whitesmoke;
+  color: black;
+}
+
+input[type='text'] {
+  letter-spacing: 0.1px;
+}
+
+.search-form input[type='text'] {
+  width: 100px;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (min-width: 640px) {
+  .search-form input[type='text'] {
+    width: 150px;
+  }
+}
+
+@media (min-width: 750px) {
+  .search-form input[type='text'] {
+    width: 200px;
+  }
+}
+
+/*** CLOSE-BUTTONS ***/
+.close-btn {
+  display: block;
+  position: relative;
+  width: 28px;
+  height: 16px;
+  padding: 0.8rem 0.7rem;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.close-btn::before,
+.close-btn::after {
+  position: absolute;
+  height: 2.5px;
+  background-color: black;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.close-btn::before,
+.close-btn::after {
+  content: ' ';
+}
+
+.close-btn::before {
+  top: 2;
+  left: 0;
+  width: 100%;
+  transform: rotate(-45deg);
+}
+
+.close-btn::after {
+  width: 100%;
+  left: 0;
+  top: 2;
+  transform: rotate(45deg);
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Manager</title>
+    <script type="module" src="scripts/edit-footballer.js"></script>
+    <script type="module" src="scripts/delete-footballer.js"></script>
+    <script type="module" src="scripts/loadFootballers.js"></script>
+    <script type="module" src="scripts/burger-menu.js"></script>
+    <script type="module" src="scripts/create-footballer.js"></script>
+    <script type="module" src="scripts/sort.js"></script>
+    <script type="module" src="scripts/total-price-counter.js"></script>
+    <script type="module" src="scripts/search.js"></script>
+    <script type="module" src="scripts/burger-search.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="edit-footballer footballer-data close">
+      <header>
+        <div></div>
+        <h1 class="footballer-data-heading">Edit Footballer</h1>
+        <div class="edit-close-btn close-btn">
+          <span></span>
+        </div>
+      </header>
+      <form class="footballer-data-form" action="">
+        <label class="name-label" for="edit-name">Enter name</label>
+        <input type="text" id="edit-name" />
+        <label class="citezenship-label" for="edit-citizenship"
+          >Enter citezenship</label
+        >
+        <input type="text" id="edit-citizenship" />
+        <label class="price-label" for="edit-price">Enter price</label>
+        <input type="number" id="edit-price" />
+        <label class="height-label" for="edit-height">Enter height</label>
+        <input type="number" id="edit-height" />
+        <label class="height-label" for="image">Enter image address</label>
+        <input type="text" id="edit-image" />
+        <label class="position-label" for="edit-position"
+          >Select position</label
+        >
+        <select class="position-select" name="position" id="edit-position">
+          <option value="goolkeeper">goolkeeper</option>
+          <option value="left-back">left-back</option>
+          <option value="center-back">center-back</option>
+          <option value="right-back">right-back</option>
+          <option value="defensive-mid.">defensive-mid.</option>
+          <option value="offensive-mid.">offensive-mid.</option>
+          <option value="right-wing">right-wing</option>
+          <option value="left-wing">left-wing</option>
+          <option value="forward">forward</option>
+        </select>
+        <fieldset class="foot">
+          <legend>Select foot</legend>
+          <ul>
+            <li>
+              <label for="edit-left">Left</label
+              ><input
+                class="edit-foot-radio"
+                id="edit-left"
+                type="radio"
+                value="left"
+                name="foot"
+              />
+            </li>
+            <li>
+              <label for="edit-right">Right</label
+              ><input
+                class="edit-foot-radio"
+                id="edit-right"
+                type="radio"
+                value="right"
+                name="foot"
+              />
+            </li>
+          </ul>
+        </fieldset>
+        <button class="edit-footballer-btn footballer-data-form-btn">
+          Edit
+        </button>
+      </form>
+    </div>
+    <div class="create-footballer-data footballer-data close">
+      <header>
+        <div></div>
+        <h1 class="footballer-data-heading">Create Footballer</h1>
+        <div class="create-close-btn close-btn">
+          <span></span>
+        </div>
+      </header>
+      <form class="footballer-data-form" action="">
+        <label class="name-label" for="name">Enter name</label>
+        <input type="text" id="create-name" />
+        <label class="citezenship-label" for="citizenship"
+          >Enter citezenship</label
+        >
+        <input type="text" id="create-citizenship" />
+        <label class="price-label" for="create-priceprice">Enter price</label>
+        <input type="number" id="create-price" />
+        <label class="height-label" for="create-height">Enter height</label>
+        <input type="number" id="create-height" />
+        <label class="height-label" for="create-image"
+          >Enter image address</label
+        >
+        <input type="text" id="create-image" />
+        <label class="position-label" for="create-position"
+          >Select position</label
+        >
+        <select class="position-select" name="position" id="create-position">
+          <option value="goolkeeper" selected>goolkeeper</option>
+          <option value="left-back">left-back</option>
+          <option value="center-back">center-back</option>
+          <option value="right-back">right-back</option>
+          <option value="defensive-mid.">defensive-mid.</option>
+          <option value="offensive-mid.">offensive-mid.</option>
+          <option value="right-wing">right-wing</option>
+          <option value="left-wing">left-wing</option>
+          <option value="forward">forward</option>
+        </select>
+        <fieldset class="foot">
+          <legend>Select foot</legend>
+          <ul>
+            <li>
+              <label for="create-left">Left</label
+              ><input
+                class="create-foot-radio"
+                id="create-left"
+                type="radio"
+                value="left"
+                name="foot"
+                checked
+              />
+            </li>
+            <li>
+              <label for="create-right">Right</label
+              ><input
+                class="create-foot-radio"
+                id="create-right"
+                type="radio"
+                value="right"
+                name="foot"
+              />
+            </li>
+          </ul>
+        </fieldset>
+        <button class="create-footballer-btn footballer-data-form-btn">
+          Create
+        </button>
+      </form>
+    </div>
+    <div class="container">
+      <header class="header">
+        <div class="options">
+          <p class="load-footballers">My Footballers</p>
+          <p class="create-footballer">Create Footballer</p>
+        </div>
+        <div class="burger-menu">
+          <span></span>
+        </div>
+        <form class="burger-search-form" action="">
+          <input class="burger-search-text" type="text" /><button
+            class="burger-search-btn"
+          >
+            Search</button
+          ><button class="burger-cancel-btn">Cancel</button>
+        </form>
+        <form class="search-form" action="">
+          <input class="search-text" type="text" /><button class="search-btn">
+            Search</button
+          ><button class="cancel-btn">Cancel</button>
+        </form>
+      </header>
+      <main class="main">
+        <div class="sorting-options">
+          <form class="sorting-options-form" action="">
+            <h2>Manage Footballers</h2>
+            <label for="height">Sort by height</label>
+            <input id="height" type="range" min="150" max="220" step="1" />
+            <p class="input-value">
+              Height: <output id="height-value"></output>
+            </p>
+            <label for="price">Sort by price</label>
+            <input id="price" type="range" min="0" max="100" step="1" />
+            <p class="input-value">
+              Price: <output id="price-value"></output>,000,000$
+            </p>
+            <label class="position-label" for="position"
+              >Sort by position</label
+            >
+            <select class="position-select" name="position" id="position">
+              <option value="goolkeeper" selected>goolkeeper</option>
+              <option value="left-back">left-back</option>
+              <option value="center-back">center-back</option>
+              <option value="right-back">right-back</option>
+              <option value="defensive-mid.">defensive-mid.</option>
+              <option value="offensive-mid.">offensive-mid.</option>
+              <option value="right-wing">right-wing</option>
+              <option value="left-wing">left-wing</option>
+              <option value="forward">forward</option>
+            </select>
+            <fieldset class="foot">
+              <legend>Sort by foot</legend>
+              <ul>
+                <li>
+                  <label for="left">Left</label
+                  ><input
+                    id="left "
+                    type="radio"
+                    value="left"
+                    name="foot"
+                    checked
+                  />
+                </li>
+                <li>
+                  <label for="right">Right</label
+                  ><input id="right" type="radio" value="right" name="foot" />
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="user-options">
+              <legend>Sorting options</legend>
+              <ul>
+                <li>
+                  <label for="height-option">By Height</label
+                  ><input id="height-option" type="checkbox" />
+                </li>
+                <li>
+                  <label for="price-option">By Price</label
+                  ><input id="price-option" type="checkbox" />
+                </li>
+                <li>
+                  <label for="position-option">By Position</label
+                  ><input id="position-option" type="checkbox" />
+                </li>
+                <li>
+                  <label for="foot-option">By Foot</label
+                  ><input id="foot-option" type="checkbox" />
+                </li>
+              </ul>
+            </fieldset>
+            <button class="sort-btn">Sort Footballers</button>
+          </form>
+          <footer class="sorting-options-footer">
+            <h2>Count total price</h2>
+            <button class="price-btn">Count</button>
+            <p class="price-value">Total price:</p>
+          </footer>
+        </div>
+        <div class="display-area"></div>
+      </main>
+    </div>
+  </body>
+</html>
