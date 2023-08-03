@@ -136,7 +136,7 @@ input:focus {
   padding: 0.8rem 0.7rem;
   background-color: transparent;
   cursor: pointer;
-  z-index: 20;
+  z-index: 37;
 }
 
 .close-btn::before,
@@ -165,4 +165,26 @@ input:focus {
   left: 0;
   top: 2;
   transform: rotate(45deg);
+}
+
+/*** OVERLAY ***/
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 35;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
 }

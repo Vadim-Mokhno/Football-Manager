@@ -1,29 +1,42 @@
 import displayFootballers from './loadFootballers.js';
+import validateForm from './validateForm.js';
 const footballerData = document.querySelector('.create-footballer-data');
 const createFootballerElement = document.querySelector('p.create-footballer');
 const closeBtn = document.querySelector('.create-close-btn');
 const footballerDataFormBtn = document.querySelector('.create-footballer-btn');
+const overlay = document.querySelector('.overlay');
 
 createFootballerElement.addEventListener('click', function () {
   footballerData.classList.toggle('close');
+  overlay.classList.toggle('hidden');
+  document.querySelector('body').style.overflow = 'hidden';
 });
 
 closeBtn.addEventListener('click', function () {
+  clearFormFields();
   footballerData.classList.add('close');
+  overlay.classList.toggle('hidden');
+  document.querySelector('body').style.overflow = 'scroll';
 });
 
 footballerDataFormBtn.addEventListener('click', async event => {
   event.preventDefault();
-  await fetch(`http://localhost:${window.location.port}/api/footballers`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(createFootballer()),
-  });
-  clearFormFields();
-  await displayFootballers();
-  footballerData.classList.add('close');
+  if (validateForm()) {
+    await fetch(`http://localhost:${window.location.port}/api/footballers`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(createFootballer()),
+    });
+    clearFormFields();
+    await displayFootballers();
+    footballerData.classList.add('close');
+    overlay.classList.add('hidden');
+    document.querySelector('body').style.overflow = 'scroll';
+  } else {
+    alert('All form fields must be filled!');
+  }
 });
 
 export default function createFootballer() {

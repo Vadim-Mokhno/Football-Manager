@@ -5,7 +5,7 @@
   transform: translateY(0);
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 10px;
   min-height: 50vh;
   width: 100%;
   background-color: whitesmoke;
@@ -13,18 +13,26 @@
   color: black;
   z-index: 40;
   border-radius: 10px;
+  font-size: 12px;
+}
+
+.form-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footballer-data form {
   display: flex;
   flex-direction: column;
-  padding: 0 40px 30px;
+  align-items: center;
+  padding: 0 15px 10px;
 }
 
 .footballer-data form input,
 .footballer-data form select,
 .footballer-data form fieldset {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .footballer-data.close {
@@ -57,28 +65,28 @@
 }
 
 @media (min-width: 450px) {
-  .footballer-data form {
-    padding: 0 140px 50px;
+  .form-item {
+    width: 85%;
   }
 }
 
 @media (min-width: 520px) {
-  .footballer-data form {
-    padding: 0 180px 50px;
+  .form-item {
+    width: 75%;
   }
 }
 
 @media (min-width: 600px) {
   .footballer-data {
     left: 50%;
-    top: 5%;
+    top: 30px;
     transform: translateX(-50%);
     min-height: 60vh;
-    width: 60%;
+    width: 510px;
   }
 
-  .footballer-data form {
-    padding: 0 100px 50px;
+  .form-item {
+    width: 85%;
   }
 
   .footballer-data.close {
@@ -86,33 +94,50 @@
   }
 }
 
-@media (min-width: 800px) {
-  .footballer-data form {
-    padding: 0 150px 50px;
+@media (min-width: 700) {
+  .form-item {
+    width: 60%;
+  }
+  .footballer-data {
+    width: 600px;
   }
 }
 
-@media (min-width: 900px) {
-  .footballer-data form {
-    padding: 0 180px 50px;
+@media (min-width: 800px) {
+  .form-item {
+    width: 50%;
+  }
+  .footballer-data {
+    width: 720px;
   }
 }
 
 @media (min-width: 1000px) {
-  .footballer-data form {
-    padding: 0 230px 50px;
+  .form-item {
+    width: 40%;
+  }
+
+  .footballer-data {
+    width: 870px;
   }
 }
 
 @media (min-width: 1200px) {
-  .footballer-data form {
-    padding: 0 280px 50px;
+  .form-item {
+    width: 35%;
+  }
+  .footballer-data {
+    width: 1000px;
   }
 }
 
 @media (min-width: 1350px) {
-  .footballer-data form {
-    padding: 0 310px 50px;
+  .form-item {
+    width: 30%;
+  }
+
+  .footballer-data {
+    width: 85vw;
   }
 }
 
