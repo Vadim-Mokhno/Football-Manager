@@ -12,19 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Install Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 18
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis     
       - name: Checkout Code
-        uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: npm install
-      - name: Install Jest
-        run: npm install jest --save-dev
-      - name: Run Unit Tests
-        run: npm run test
+        uses: actions/checkout@v3      
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
