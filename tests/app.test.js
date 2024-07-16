@@ -1,12 +1,10 @@
 const request = require('supertest');
 
 
-describe('dlkew', () => {
- 
-  it('kll;k;lk;', async () => {
-    
-    expect(1).toEqual(1);
-  });
+describe('POST', () => {
+  it('/products creates a product', async () => {
+        expect(2).toEqual(2);
 
-  
+    
+  });
 });
