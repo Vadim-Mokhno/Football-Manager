@@ -24,7 +24,7 @@ jobs:
       - name: Install Jest
         run: npm install jest --save-dev
       - name: Run Unit Tests
-        run: CI=true npm test
+        run: npm test
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
