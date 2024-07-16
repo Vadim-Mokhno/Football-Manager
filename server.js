@@ -23,3 +23,5 @@ mongoose.connection.once('open', () => {
   console.log('Connected to MongoDB');
   app.listen(PORT, () => console.log('Server is starting on port:' + PORT));
 });
+
+module.exports = app;
