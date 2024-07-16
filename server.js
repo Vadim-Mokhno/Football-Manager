@@ -7,7 +7,7 @@ const connectDB = require('./config/dbConnection');
 const app = express();
 const PORT = process.env.PORT || 3500;
 
-//connectDB();
+connectDB();
 
 app.use(cors());
 app.use(express.static('public'));
@@ -19,9 +19,8 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-/*mongoose.connection.once('open', () => {
+mongoose.connection.once('open', () => {
   console.log('Connected to MongoDB');
   app.listen(PORT, () => console.log('Server is starting on port:' + PORT));
-});*/
+});
 
-module.exports = app;
